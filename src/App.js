@@ -1,7 +1,7 @@
 import React from "react";
 import AppHeader from "./AppHeader";
-import TouristInfoCards from "./TouristInfoCards";
 import Bookings from "./Bookings";
+import TouristInfoCards from "./TouristInfoCards";
 import Footer from "./Footer";
 import "./App.css";
 

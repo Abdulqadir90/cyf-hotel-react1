@@ -56,3 +56,9 @@ tr {
 .card {
   width: 18rem;
 }
+
+.card-holder {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
