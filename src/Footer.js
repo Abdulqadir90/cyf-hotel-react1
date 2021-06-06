@@ -2,15 +2,13 @@ import React from "react";
 
 const Footer = props => {
   return (
-    <div>
-      <footer>
-        <ul>
-          {props.Address.map((element, index) => (
-            <li key={index}>{element}</li>
-          ))}
-        </ul>
-      </footer>
-    </div>
+    <footer className="card-footer bg-dark text-light mt-3">
+      <ul className="list-unstyled footer">
+        {props.hotelAddress.map((element, index) => (
+          <li key={index}>{element}</li>
+        ))}
+      </ul>
+    </footer>
   );
 };
 
