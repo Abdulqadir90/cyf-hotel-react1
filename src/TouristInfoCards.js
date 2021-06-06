@@ -1,46 +1,42 @@
 import React from "react";
 
 const TouristInfoCards = () => {
+  const cities = [
+    {
+      name: "Glasgow",
+      image:
+        "https://i1.wp.com/www.hisour.com/wp-content/uploads/2018/05/Architecture-in-Glasgow.jpg?fit=1024%2C640&ssl=1",
+      website: "https://peoplemakeglasgow.com/"
+    },
+    {
+      name: "Manchester",
+      image:
+        "https://assets.hs2.org.uk/wp-content/uploads/2018/03/30101135/H5A1HwPQ-unsplash-900x600.jpg",
+      website: "https://visitmanchester.com/"
+    },
+    {
+      name: "London",
+      image: "https://lp-cms-production.imgix.net/2019-06/55425108.jpg",
+      website: "https://visitlondon.com/"
+    }
+  ];
   return (
-    <div className="card-holder">
-      <div className="card">
-        <img
-          className="card-img-top"
-          src="https://avisassets.abgemea.com/dam/jcr:aa3b1977-80d3-4f93-a8ac-09e07feec22e/Glasgow_Squinty_Bridge_Credit_iStock_theasis.jpg"
-          alt=""
-        />
-        <div className="card-body">
-          <a className="btn btn-primary" href="https://peoplemakeglasgow.com">
-            Glasgow
-          </a>
+    <div className="cities">
+      {cities.map((city, index) => (
+        <div key={index} className="card">
+          <img src={city.image} alt="city" className="card-img-top" />
+          <div className="card-body">
+            <a
+              href={city.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-dark"
+            >
+              Visit {city.name}
+            </a>
+          </div>
         </div>
-      </div>
-
-      <div className="card">
-        <img
-          className="card-img-top"
-          src="https://www.cityam.com/wp-content/uploads/2020/02/London_Tower_Bridge_City.jpg"
-          alt=""
-        />
-        <div className="card-body">
-          <a className="btn btn-primary" href="https://visitlondon.com">
-            London
-          </a>
-        </div>
-      </div>
-
-      <div className="card">
-        <img
-          className="card-img-top"
-          src="https://www.creativetourist.com/app/uploads/2016/08/Manchester-MM-WIDE.jpg"
-          alt=""
-        />
-        <div className="card-body">
-          <a className="btn btn-primary" href="https://visitmanchester.com">
-            Manchester
-          </a>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
